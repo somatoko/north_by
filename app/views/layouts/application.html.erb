@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title><%= content_for(:title) || "North By" %></title>
+		<title><%= content_for(:title) || "North By North East" %></title>
 		<meta name="viewport" content="width=device-width,initial-scale=1">
 		<meta name="apple-mobile-web-app-capable" content="yes">
 		<meta name="mobile-web-app-capable" content="yes">
@@ -23,6 +23,15 @@
 	</head>
 
 	<body class="bg-yellow-50">
-		<%= yield %>
+		<section class="py-12 px-6">
+			<%= render 'layouts/nav' %>
+			<div class="container mx-auto">
+				<div class="mt-6">
+					<p class="notice"><%= notice %></p>
+					<p class="alert"><%= alert %></p>
+					<%= yield %>
+				</div>
+			</div>
+		</section>
 	</body>
 </html>

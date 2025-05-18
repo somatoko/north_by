@@ -9,11 +9,20 @@ Things you may want to cover:
 
 * System dependencies
 
+  - simple_form
+
 * Configuration
 
-* Database creation
+```
+rails generate devise:install
+rails generate simple_form:install
+```
 
 * Database initialization
+
+```
+bin/rails db:prepare
+```
 
 * How to run the test suite
 
